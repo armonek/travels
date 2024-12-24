@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body {
+                margin: 0;
+                min-height: 200vh;
+                background-image: url(/IMG_4242.jpg);
+                background-color: #ede3e3;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                font-family: Tahoma, sans-serif;
+            }
+
+            .centermap {
+                margin: auto;
+                text-align: center;
+            }
+           
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: hwb(22 50% 8%); /* Világosabb piros háttérszín */
+                border: 1px solid #b84343;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                width: 300px;
+                max-height: 250px; /* Maximális magasság */
+                overflow-y: auto; /* Görgetés engedélyezése */
+                overflow-x: hidden;
+                border-radius: 5px;
+                text-align: center; /* Tartalom középre igazítása */
+                word-wrap: break-word;
+                word-break: break-word;
+
+            }
+            .dropdown-header {
+                background-color: #b84343; /* Sötét piros háttérszín */
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 10px;
+                position: sticky;
+                top: 0; /* Mindig a tetején marad */
+                z-index: 10; /* Fejléc a tartalom fölött */
+                border-bottom: 1px solid #b84343;
+            }
+
+            .dropdown-content img {
+                max-width: 90%; /* A képek méretének igazítása */
+                margin-bottom: 10px;
+            }
+            .dropdown-content a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            .dropdown-content a:hover {
+                text-decoration: underline;
+            }
+            .image-map {
+                position: relative;
+            }
+            .image-map img {
+                max-width: 100%; /* Kép skálázása */
+            }
+
+            p{
+              padding: 5px;
+              font-size: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="centermap" style="width: 1050px; height: 1684px; justify-content: center; align-items: center; display: flex; background-color: #96a9b9;">
+            <img src="kepek/travelmap.png" style="width: 950px; height: 1484px;" usemap="#image-map">
+                <map name="image-map">
+                <!--fontospontok - ahol mar jartam-->
+                    <area title="Sao Paulo" href="#" class="dropdown-trigger" data-target="dropdown1" coords="771,1088,5" shape="circle">
+                    <area title="Rio de Janeiro" href="#" class="dropdown-trigger" data-target="dropdown2" coords="797,1091,6" shape="circle">
+                    <area title="Iguazu Vizeses" href="#" class="dropdown-trigger" data-target="dropdown3" coords="692,1121,6" shape="circle">
+                    <area title="Misiones: Jardin America, Posadas" href="#" class="dropdown-trigger" data-target="dropdown4" coords="684,1135,6" shape="circle">
+                    <area title="Paraguay: Asuncion, Salto Cristal, Encarnacion" href="#" class="dropdown-trigger" data-target="dropdown5" coords="664,1121,6" shape="circle">
+                    <area title="Buenos Aires" href="#" class="dropdown-trigger" data-target="dropdown6" coords="644,1205,6" shape="circle">
+                    <area title="Bariloche" href="#" class="dropdown-trigger" data-target="dropdown7" coords="531,1250,6" shape="circle">
+                    <area title="Puerto Montt" href="#" class="dropdown-trigger" data-target="dropdown8" coords="517,1264,6" shape="circle">
+                    <area title="Santiago de Chile + Valparaiso" href="#" class="dropdown-trigger" data-target="dropdown9" coords="537,1197,6" shape="circle">
+                    <area title="Atacama sivatag (Calama)" href="#" class="dropdown-trigger" data-target="dropdown10" coords="558,1099,6" shape="circle">
+                    <area title="Salar de Uyuni" href="#" class="dropdown-trigger" data-target="dropdown11" coords="576,1080,5" shape="circle">
+                    <area title="Sucre" href="#" class="dropdown-trigger" data-target="dropdown12" coords="588,1064,6" shape="circle">
+                    <area title="Santa Cruz de la Sierra" href="#" class="dropdown-trigger" data-target="dropdown13" coords="620,1048,6" shape="circle">
+                    <area title="Samaipata" href="#" class="dropdown-trigger" data-target="dropdown14" coords="604,1052,6" shape="circle">
+                    <area title="Cochabamba" href="#" class="dropdown-trigger" data-target="dropdown15" coords="592,1038,8" shape="circle">
+                    <area title="La Paz - El Alto + El Chorro" href="#" class="dropdown-trigger" data-target="dropdown16" coords="576,1034,8" shape="circle">
+                    <area title="Rurrenabaque" href="#" class="dropdown-trigger" data-target="dropdown17" coords="580,1012,6" shape="circle">
+                    <area title="Titicaca-to: Copacabana, Isla del Sol, Puno" href="#" class="dropdown-trigger" data-target="dropdown18" coords="560,1040,6" shape="circle">
+                    <area title="Arequipa" href="#" class="dropdown-trigger" data-target="dropdown19" coords="535,1042,6" shape="circle">
+                    <area title="Szent Volgy: Cusco, Machu Pichu" href="#" class="dropdown-trigger" data-target="dropdown20" coords="533,1004,6" shape="circle">
+                    <area title="Lima" href="#" class="dropdown-trigger" data-target="dropdown21" coords="493,1008,6" shape="circle">
+                    <area title="Trujillo es Huanchaco" href="#" class="dropdown-trigger" data-target="dropdown22" coords="465,962,6" shape="circle">
+                    <area title="Yurimaguas + Rio Amazonas" href="#" class="dropdown-trigger" data-target="dropdown23" coords="497,952,6" shape="circle">
+                    <area title="Iquitos" href="#" class="dropdown-trigger" data-target="dropdown24" coords="519,925,6" shape="circle">
+                    <area title="Rio Napo" href="#" class="dropdown-trigger" data-target="dropdown25" coords="499,903,6" shape="circle">
+                    <area title="Quito + Otavalo" href="#" class="dropdown-trigger" data-target="dropdown26" coords="477,897,10" shape="circle">
+                    <area title="Del-Ecuador: Cuenca, Chimborazzo, Banos" href="#" class="dropdown-trigger" data-target="dropdown27" coords="467,915,6" shape="circle">
+                <!--tervezett helyek-->
+                    <area title="Montañita - Ecuador" href="#" onclick="event.preventDefault()" coords="453,901,6" shape="circle">
+                    <area title="Cali - Kolombia" href="#" onclick="event.preventDefault()" coords="491,859,6" shape="circle">
+                    <area title="Bogota - Kolombia" href="#" onclick="event.preventDefault()" coords="517,841,6" shape="circle">
+                    <area title="Medellin - Kolombia" href="#" onclick="event.preventDefault()" coords="497,825,6" shape="circle">
+                    <area title="Cartagena - Kolombia" href="#" onclick="event.preventDefault()" coords="499,798,5" shape="circle">
+                    <area title="Tayrona Nemzeti Park - Kolombia" href="#" onclick="event.preventDefault()" coords="513,786,6" shape="circle">
+                    <area title="Panama City - Panama" href="#" onclick="event.preventDefault()" coords="461,801,6" shape="circle">
+                    <area title="San Jose - Costa Rica" href="#" onclick="event.preventDefault()" coords="419,792,5" shape="circle">
+                    <area title="Nicaragua-to - Nicaragua" href="#" onclick="event.preventDefault()" coords="405,772,6" shape="circle">
+                    <area title="Antigua - Guatemala" href="#" onclick="event.preventDefault()" coords="360,746,6" shape="circle">
+                    <area title="Tikal Guatemala" href="#" onclick="event.preventDefault()" coords="366,724,6" shape="circle">
+                    <area title="Chitzen Itza - Mexiko" href="#" onclick="event.preventDefault()" coords="378,692,6" shape="circle">
+                    <area title="Cancun - Mexiko" href="#" onclick="event.preventDefault()" coords="392,690,7" shape="circle">
+                </map>
+            <!-- Lenyíló tartalmak -->
+            <div id="dropdown1" class="dropdown-content">
+              <div class="dropdown-header">Sao Paulo</div>
+              <p>Utazásunk első állomása. A kezdeti kultúrsokk sokáig velünk tartott, bár azért meg kell hagyni, hogy közel ez a legveszélyesebb város Dél-Amerikában. Az utcán a hajléktalanok, drogosok, mint a zombik ténferegtek, ha rossz utcába tévedsz, könnyen egy favellában találhatod magad. Így hát mindenhova uberrel mentünk, rettentő óvatosak voltunk, utólag visszatekintve túlságosan is, nyilván…</p>
+              <img src="/kepek/brazil/sao (1).jpg">
+              <img src="/kepek/brazil/sao (2).jpg">
+              <img src="/kepek/brazil/sao (3).jpg">
+              <img src="/kepek/brazil/sao (4).jpg">
+            </div>
+
+            <div id="dropdown2" class="dropdown-content">
+              <div class="dropdown-header">Rio de Janeiro</div>
+              <p>Virágzó, vidám, élettel teli város. Teljes kettőség, bohém negyed, veszélyes alakok az utcán, felhőkarcolók, homokos tengerpart, a túl oldalon a gazdagok nyugodt élete. <br>
+                Mindenkit megviselt ez a pár nap, mindenféle betegséget összeszedtünk, de azért én vezetek az ételmérgezéses, korházas sztorimmal. Ennek ellenére mindent kipipáltunk: a Megváltó szobra, fürdés az Ipanemán, majd a Copacabánán, Niteroi, majd alkudozás egy repjegyért a reptéren…
+                </p>
+              <img src="/kepek/brazil/rio (1).PNG">
+              <img src="/kepek/brazil/rio (2).PNG">
+              <img src="/kepek/brazil/rio (3).PNG">
+              <img src="/kepek/brazil/rio (4).PNG">
+              <img src="/kepek/brazil/rio (6).PNG">
+              <img src="/kepek/brazil/rio (7).PNG">
+              <img src="/kepek/brazil/rio (5).PNG">
+            </div>
+
+            <div id="dropdown3" class="dropdown-content">
+              <div class="dropdown-header">Iguazu Vizeses</div>
+              <p>Vörös földön landoltunk, első utunk a Castle Cataratas nevű 8 csillagos szállodába vezetett. Másnap találkoztunk anyával és elmentünk a vízesés brazil oldalát megnézni. Szakadt az eső és a morajló vízesés verte ránk a vizet. Másnap átnéztünk az argentin oldalra, ott napsütés, szivárvány és gyönyörű panoráma várt. 
+              </p>
+              <img src="/kepek/brazil/iguazu (1).jpg">
+              <img src="/kepek/brazil/iguazu (2).jpg">
+              <img src="/kepek/brazil/iguazu (3).jpg">
+              <img src="/kepek/brazil/iguazu (4).jpg">
+              <img src="/kepek/brazil/iguazu (5).jpg">
+            </div>
+
+            <div id="dropdown4" class="dropdown-content">
+              <div class="dropdown-header">Misiones</div>
+              <p>Második otthonom. Jardin America a világ közepe. Posadas egy világváros. Majdnem két hónapot töltöttem itt, spanyolul sokat nem tanultam, de az argentin gasztronómiából és magából Argentínából kellően kiábrándultam. Rengeteg vízesés, szar tömegközlekedés, igazából nagyon semmi csak a mate. Ja meg Eldorádó. <br>
+                Just for the records, a helyek ahol jártam: Puerto Rico, Wanda, Corpus Christi, Santo Pipo, Jardin America, Posadas, Aristóbulo del Valle, San Ignacio, Capioví, Ruiz de Montoya, Cuña Pirú, Villa Salto Encantado, Moconá, Puerto Rico, Eldorado, Montecarlo, Puerto Iguazu.
+                </p>
+              <img src="/kepek/argentina/misiones (1).jpg">
+              <img src="/kepek/argentina/misiones (2).jpg">
+              <img src="/kepek/argentina/misiones (3).jpg">
+              <img src="/kepek/argentina/misiones (11).jpg">
+              <img src="/kepek/argentina/misiones (4).jpg">
+              <img src="/kepek/argentina/misiones (5).jpg">
+              <img src="/kepek/argentina/misiones (6).jpg">
+              <img src="/kepek/argentina/misiones (7).jpg">
+              <img src="/kepek/argentina/misiones (8).jpg">
+              <img src="/kepek/argentina/misiones (9).jpg">
+              <img src="/kepek/argentina/misiones (10).jpg">
+              <img src="/kepek/argentina/misiones (14).jpg">
+              <img src="/kepek/argentina/misiones (12).jpg">
+              <img src="/kepek/argentina/misiones (13).jpg">
+            </div>
+
+            <div id="dropdown5" class="dropdown-content">
+              <div class="dropdown-header">Paraguay</div>
+              <p>Megint csupa kettősség. Az Encarnacion-i piac az argentinok számára putri (Ciudad del Este ugyanez a brazilok számára), az ország többi része meglepően nyugatias. Nincsenek adók, az infláció még az argentinokénál is hatalmasabb. (20 guarani=1 forint) <br>
+                Asuncion európai stílusú város, hangulatos kávézókkal. Az emberek rettentően nyitottak és segítőkészek, nem sok külföldi turista jár az országban. <br>
+                Salto Cristal az egyik leggyönyörűbb vízesés ahol jártam és csak a miénk volt. Luxus hotel, teljes ellátás. 
+                </p>
+              <img src="/kepek/paraguay/paraguay (8).jpg">
+              <img src="/kepek/paraguay/paraguay (2).jpg">
+              <img src="/kepek/paraguay/paraguay (1).jpg">
+              <img src="/kepek/paraguay/paraguay (3).jpg">
+              <img src="/kepek/paraguay/paraguay (4).jpg">
+              <img src="/kepek/paraguay/paraguay (5).jpg">
+              <img src="/kepek/paraguay/paraguay (6).jpg">
+              <img src="/kepek/paraguay/paraguay (7).jpg">
+              <img src="/kepek/paraguay/paraguay (9).jpg">
+            </div>
+
+            <div id="dropdown6" class="dropdown-content">
+              <div class="dropdown-header">Buenos Aires</div>
+              <p>Rájöttem, hogy Argentína mégsem olyan rossz hely (csak Misiones elmaradott) és Buenos Aires egy fasza város. Lehet még egyszer ide költözöm, mintha csak Európában lennék. <br>
+                Magdi néni és a magyar szállás egy csoda, de az itteni magyarok is jó arcok.  
+                </p>
+              <img src="/kepek/argentina/buenos (1).jpg">
+              <img src="/kepek/argentina/buenos (10).jpg">
+              <img src="/kepek/argentina/buenos (2).jpg">
+              <img src="/kepek/argentina/buenos (3).jpg">
+              <img src="/kepek/argentina/buenos (4).jpg">
+              <img src="/kepek/argentina/buenos (5).jpg">
+              <img src="/kepek/argentina/buenos (6).jpg">
+              <img src="/kepek/argentina/buenos (7).jpg">
+              <img src="/kepek/argentina/buenos (8).jpg">
+              <img src="/kepek/argentina/buenos (9).jpg">
+            </div>
+
+            <div id="dropdown7" class="dropdown-content">
+              <div class="dropdown-header">Bariloche</div>
+              <p>Gyönyörű táj és hideg. Hatalmas tavak és andoki kondor. Egy nagyon kedves rokont ismertem itt meg!</p>
+              <img src="/kepek/argentina/bari (1).jpg">
+              <img src="/kepek/argentina/bari (2).jpg">
+              <img src="/kepek/argentina/bari (3).jpg">
+              <img src="/kepek/argentina/bari (4).jpg">
+              <img src="/kepek/argentina/bari (5).jpg">
+              <img src="/kepek/argentina/bari (6).jpg">
+              <img src="/kepek/argentina/bari (7).jpg">
+            </div>
+
+            <div id="dropdown8" class="dropdown-content">
+              <div class="dropdown-header">Puerto Montt</div>
+              <p>Chile nem az aminek látszik. Egy erős gazdaságú ország hírében áll, de az emberek alkoholisták. <br>
+                Először pillantottam meg itt a csendes óceánt és hatalmas fókákat, tengeri farkasokat egy halpiacon, fából épült házak között. 
+                </p>
+              <img src="/kepek/chile/puerto (1).jpg">
+              <img src="/kepek/chile/puerto (2).jpg">
+              <img src="/kepek/chile/puerto (3).jpg">
+              <img src="/kepek/chile/puerto (4).jpg">
+              <img src="/kepek/chile/puerto (5).jpg">
+            </div>
+
+            <div id="dropdown9" class="dropdown-content">
+              <div class="dropdown-header">Santiago de Chile</div>
+              <p>A belváros elesett, azon kívül vannak szép helyek, de minden szürke. <br>
+                Viña del Mar-ban találkoztam először igazán a Csendes-óceánnal, csak bokáig mentem be, rettentően hideg volt. <br>
+                Valparaiso egy hangulatos bohém kis város, csupa graffitivel. Összességében Chile nem egy vonzó ország. 
+                </p>
+              <img src="/kepek/chile/santiago (1).jpg">
+              <img src="/kepek/chile/santiago (2).jpg">
+              <img src="/kepek/chile/santiago (3).jpg">
+              <img src="/kepek/chile/santiago (4).jpg">
+              <img src="/kepek/chile/santiago (5).jpg">
+              <img src="/kepek/chile/santiago (6).jpg">
+              <img src="/kepek/chile/santiago (7).jpg">
+              <img src="/kepek/chile/santiago (8).jpg">
+            </div>
+
+            <div id="dropdown10" class="dropdown-content">
+              <div class="dropdown-header">Atacama sivatag</div>
+              <p>20 órás buszút át a sivatagon. Először jártam 2000 méter fölött. Innen kezdődik a por birodalma ami az egész Altiplanón végig kísér.</p>
+              <img src="/kepek/chile/atacama (1).jpg">
+              <img src="/kepek/chile/atacama (2).jpg">
+              <img src="/kepek/chile/atacama (3).jpg">
+            </div>
+
+            <div id="dropdown11" class="dropdown-content">
+              <div class="dropdown-header">Salar de Uyuni</div>
+              <p>Hatalmas sósivatag közel 4000 méteren. Előző éjszaka rettentően féltünk, mert nem voltunk kellően akklimatizálódva a magassághoz. Egyedüli tüneteim: fejfájás, nehezebb légzés (nyilván, jóval kevesebb itt az oxigén), zsibbadó végtagok. De a coca tea segít és rohadt finom. <br>
+                A sósivatag hatalmas, mi csak egy kis szegletét láttuk, ha visszajövök, mélyebbre bemegyek. 
+                </p>
+              <img src="/kepek/bolivia/uyuni (1).jpg">
+              <img src="/kepek/bolivia/uyuni (2).jpg">
+              <img src="/kepek/bolivia/uyuni (3).jpg">
+              <img src="/kepek/bolivia/uyuni (4).jpg">
+            </div>
+
+            <div id="dropdown12" class="dropdown-content">
+              <div class="dropdown-header">Sucre</div>
+              <p>Aka Ciudad Blanca. Mindenhol csupa fehér házak, kis utcák, egy kedves kis város. Sok mindent nem lehet csinálni mégis megragad valahogy, a nyugalom szigete. Ott jártunk kor belefutottunk az ország egyik legnagyobb ünnepébe, a Guadalupei Szűz Anya ünnepébe. Több mint 50 ezer táncos vonult az utcán (többségük tradicionálisnak szerintem kicsit sem mondható produkcióval), rengeteg tüzijáték. Később rájöttem, hogy ez mindennapos, majdnem minden hétvégén volt valami felvonulás. Itt szeretnek bulizni az emberek, de nem dolgozni, majdnem minden ünnep szabadnap is egyben. 
+              </p>
+              <img src="/kepek/bolivia/sucre (1).jpg">
+              <img src="/kepek/bolivia/sucre (2).jpg">
+              <img src="/kepek/bolivia/sucre (3).jpg">
+              <img src="/kepek/bolivia/sucre (4).jpg">
+              <img src="/kepek/bolivia/sucre (6).jpg">
+              <img src="/kepek/bolivia/sucre (7).jpg">
+              <img src="/kepek/bolivia/sucre (9).jpg">
+              <img src="/kepek/bolivia/sucre (5).jpg">
+              <img src="/kepek/bolivia/sucre (8).jpg">
+            </div>
+
+            <div id="dropdown13" class="dropdown-content">
+              <div class="dropdown-header">Santa Cruz de la Sierra</div>
+              <p>A legnagyobb és a legnyugatiasabb város Bolíviában. És a legnyomasztóbb is, bár ott jártunkkor az is befolyásolta, hogy a hatalmas erdő tűznek az Amazonasban a füstjét ide hozta a szél. Itt található Dél-Amerika közepe, egy kis téren, csak ezt akartam megnézni, de nyilván elfelejtettem. Flóra innen repült haza, úgyhogy innen egyedül folytatom az utam. 
+              </p>
+              <img src="/kepek/bolivia/santa (1).jpg">
+              <img src="/kepek/bolivia/santa (2).jpg">
+              <img src="/kepek/bolivia/santa (3).jpg">
+              <img src="/kepek/bolivia/santa (4).jpg">
+            </div>
+
+            <div id="dropdown14" class="dropdown-content">
+              <div class="dropdown-header">Samaipata</div>
+              <p>Hippi kis város Bolívia szívében. Főleg nyugat európai arcok, az árak is arra hasonlítanak.<br>
+                Rengeteget főztem és jóba lettem a szálláshelyem tulajával (én voltam az egyedüli vendég), illetve részt vettem egy Pachamama szeánszon. 
+                </p>
+              <img src="/kepek/bolivia/samaipata (1).jpg">
+              <img src="/kepek/bolivia/samaipata (2).jpg">
+              <img src="/kepek/bolivia/samaipata (3).jpg">
+              <img src="/kepek/bolivia/samaipata (4).jpg">
+              <img src="/kepek/bolivia/samaipata (5).jpg">
+            </div>
+
+            <div id="dropdown15" class="dropdown-content">
+              <div class="dropdown-header">Cochabamba</div>
+              <p>Életem egyik legijesztőbb busz útjával érkeztem ide, hatalmas szakadékok mentén egy eszméletlen rozoga busszal száguldottunk, többször megállva megjavítani egyes részeit.<br>
+                Az örök tavasz városa hírében áll, nekem inkább örök kánikula. Itt ismertem meg Lenjat, a svájci lányt akivel után több mint egy hónapig utaztunk együtt. 
+                </p>
+              <img src="/kepek/bolivia/cochabamba (1).jpg">
+              <img src="/kepek/bolivia/samaipata (3).jpg">
+              <img src="/kepek/bolivia/samaipata (4).jpg">
+              <img src="/kepek/bolivia/samaipata (5).jpg">
+              <img src="/kepek/bolivia/samaipata (6).jpg">
+              <img src="/kepek/bolivia/samaipata (2).jpg">
+              <img src="/kepek/bolivia/samaipata (7).jpg">
+            </div>
+
+            <div id="dropdown16" class="dropdown-content">
+              <div class="dropdown-header">La Paz</div>
+              <p>Itt található a világ legfaszább tömegközlekedése, libegő rendszer a város fölött. A város maga természetesen szuper kaotikus, és mindenki, nők közül legalábbis népviseletet visel.<br>
+                El Alto a magasabban fekvő (4000 méteren) rész, itt található a hírhedt Cholita birkózás.<br>
+                Gyönyörű természeti helyek veszik körül, mint például a Valle de los Animas vagy az El Chorro trek, amit 4 nap alatt teljesítettünk, teljesen megrongálódott hidakon keltünk át, majd közel 3000 méter szintkülönbséget stoppoltunk fel egy camioneta platóján. 
+                </p>
+              <img src="/kepek/bolivia/lapaz (1).jpg">
+              <img src="/kepek/bolivia/lapaz (2).jpg">
+              <img src="/kepek/bolivia/lapaz (3).jpg">
+              <img src="/kepek/bolivia/lapaz (4).jpg">
+              <img src="/kepek/bolivia/lapaz (5).jpg">
+              <img src="/kepek/bolivia/lapaz (6).jpg">
+              <img src="/kepek/bolivia/lapaz (7).jpg">
+              <img src="/kepek/bolivia/lapaz (8).jpg">
+              <img src="/kepek/bolivia/lapaz (9).jpg">
+              <img src="/kepek/bolivia/lapaz (1o).jpg">
+              <img src="/kepek/bolivia/lapaz (11).jpg">
+              <img src="/kepek/bolivia/lapaz (12).jpg">
+              <img src="/kepek/bolivia/lapaz (13).jpg">
+              <img src="/kepek/bolivia/lapaz (14).jpg">
+              <img src="/kepek/bolivia/lapaz (15).jpg">
+              <img src="/kepek/bolivia/lapaz (16).jpg">
+              <img src="/kepek/bolivia/lapaz (17).jpg">
+              <img src="/kepek/bolivia/lapaz (18).jpg">
+              <img src="/kepek/bolivia/lapaz (19).jpg">
+              <img src="/kepek/bolivia/lapaz (20).jpg">
+              <img src="/kepek/bolivia/lapaz (21).jpg">
+            </div>
+
+            <div id="dropdown17" class="dropdown-content">
+              <div class="dropdown-header">Rurrenabaque</div>
+              <p>Dzsungel mélyi kisváros száguldozó tuktukokkal. Nonstop izzadás és tömény füst az Amazonas mélyéről. A szállás és a medence volt az egyetlen menedék, a folyó rettentően koszos. <br>
+                Három napot bent töltöttünk a dzsungel mélyén egy túlárazott és átverős túrán… A földön aludtunk (szúnyogháló alatt), majmokat kergettünk, lián vizet ittunk, fürödtünk a biztonságosnak mondott folyóban, ahol később egy hatalmas krokodilt láttunk (kivéve én). Visszafelé menet egy általunk épített tutajon ereszkedtünk le a folyón. <br>
+                A város közepén egy szemetes, mocsaras részen láttam először krokodilt, legalább ott sikerült.<br>
+                Megkóstoltam a gusanot (kukac), mandula íze volt. Illetve megszálltunk az egyik segítő házában, nagyon egyszerűen élnek itt az emberek. 
+                </p>
+              <img src="/kepek/bolivia/rurren (1).jpg">
+              <img src="/kepek/bolivia/rurren (2).jpg">
+              <img src="/kepek/bolivia/rurren (3).jpg">
+              <img src="/kepek/bolivia/rurren (4).jpg">
+              <img src="/kepek/bolivia/rurren (5).jpg">
+              <img src="/kepek/bolivia/rurren (6).jpg">
+              <img src="/kepek/bolivia/rurren (7).jpg">
+              <img src="/kepek/bolivia/rurren (8).jpg">
+            </div>
+
+            <div id="dropdown18" class="dropdown-content">
+              <div class="dropdown-header">Titicaca-to</div>
+              <p>Nehézkesre sikerült az átkelés a határon Peruba, mert az úton Copacabana felé folyamatos tüntetések és blokádok voltak, így egy héttel tovább maradtunk La Pazban. <br>
+                A Titicaca-tó egy fennséges hely, 4000 méter fölött. Egyik nap áthajóztunk az Isla del Sol-ra (Napsziget) ahol ott éjszakáztunk tehenek és csacsik mellett vadkempingezve. Eszméletlen hideg volt, és maga a víz is, megfürödtünk benne, azaz berohantam és kirohantam. . <br>
+                Itt elváltak útjaink Lenjával egy ideig, egyedül mentem át Punoba a határ másik oldalára, ahol meglátogattam az Uros lebegő szigeteit. Az egyik legturistásabb hely ahol valaha jártam. Egy hatalmas jégesőt is elkaptam. 
+                </p>
+              <img src="/kepek/bolivia/titicaca (1).jpg">
+              <img src="/kepek/bolivia/titicaca (2).jpg">
+              <img src="/kepek/bolivia/titicaca (3).jpg">
+              <img src="/kepek/bolivia/titicaca (4).jpg">
+              <img src="/kepek/bolivia/titicaca (5).jpg">
+              <img src="/kepek/bolivia/titicaca (6).jpg">
+              <img src="/kepek/bolivia/titicaca (7).jpg">
+              <img src="/kepek/bolivia/titicaca (8).jpg">
+              <img src="/kepek/bolivia/titicaca (9).jpg">
+              <img src="/kepek/bolivia/titicaca (10).jpg">
+            </div>
+
+            <div id="dropdown19" class="dropdown-content">
+              <div class="dropdown-header">Arequipa</div>
+              <p>Itt újra találkoztunk Lenjával. Bejártuk a város fehér utcáit, a piacon bevásároltunk az összes általunk ismeretlen gyümölcsből. Kedvenc helyem egy hatalmas kolostor volt, gyönyörű építészettel és élénk színekkel. Itt válltak el végleg útjaink. 
+              </p>
+              <img src="/kepek/peru/arequipa (1).jpg">
+              <img src="/kepek/peru/arequipa (2).jpg">
+              <img src="/kepek/peru/arequipa (3).jpg">
+              <img src="/kepek/peru/arequipa (4).jpg">
+            </div>
+
+            <div id="dropdown20" class="dropdown-content">
+              <div class="dropdown-header">Szent Volgy</div>
+              <p>Kecsua szó, jelentése köldök, a világ közepe. Az inkák szent városa. A koloniális építészet találkozása az inka romokkal. Itt találkoztam az első magyar backpackerrel. <br>
+                Kapu az inkák Szent Völgye felé, ahol maga Machu Picchu is található. Extrán túlértékelt a hely, látványos, mint a képeken, de nincs lehetőség szabadon bolyongani, szigorúan követni kell az ösvényeket és folyamatosan kerülgetni a szelfiző túristákat. (A pisac-i romok sokkal jobban tetszettek.) Több órát gyalogoltam a sínek mellett, hogy eljussak oda, ráadásul több mint 9 órát álltam sorba, azért hogy végül egy órát bent legyek, de közben jóba lettem Carol Wright floridai üzletasszonnyal. <br>
+                Úton Lima fele keresztül mentünk a Nazca rajzok földjén, néhányat még a buszból is lehetett látni. 
+                </p>
+              <img src="/kepek/peru/cusco (1).jpg">
+              <img src="/kepek/peru/cusco (2).jpg">
+              <img src="/kepek/peru/cusco (3).jpg">
+              <img src="/kepek/peru/cusco (4).jpg">
+              <img src="/kepek/peru/cusco (5).jpg">
+              <img src="/kepek/peru/cusco (6).jpg">
+              <img src="/kepek/peru/cusco (7).jpg">
+              <img src="/kepek/peru/cusco (8).jpg">
+              <img src="/kepek/peru/cusco (9).jpg">
+              <img src="/kepek/peru/cusco (10).jpg">
+            </div>
+
+            <div id="dropdown21" class="dropdown-content">
+              <div class="dropdown-header">Lima</div>
+              <p>Egy helyi barátom elintézte, hogy megszállhassak egy templom vendégházában, kint a legkülső kerületben. Cserébe főztem nekik paprikás csirkét a nagyon egyszerű konyhájukban (se csapvíz, se fűszerek). <br>
+                Kedvenc részem Miraflores fancy negyede, nyilván. Hatalmas sziklafal a tenger felől, fölötte zöld park. Lent szörfösök, én is szörföltem ott. <br>
+                A centro historico, olyan mintha egy másik, kis városban lennénk. Nem a legbiztonságosabb környék. <br>
+                Kipróbáltam a cevichet, nyers hal étel és rettentően finom. 
+                </p>
+              <img src="/kepek/peru/lima (1).jpg">
+              <img src="/kepek/peru/lima (2).jpg">
+              <img src="/kepek/peru/lima (3).jpg">
+              <img src="/kepek/peru/lima (4).jpg">
+              <img src="/kepek/peru/lima (5).jpg">
+              <img src="/kepek/peru/lima (6).jpg">
+            </div>
+
+            <div id="dropdown22" class="dropdown-content">
+              <div class="dropdown-header">Trujillo es Huanchaco</div>
+              <p>Két ősi kultúra romja nyugszik itt, a moche és chimú (övék az itt található Chan Chan, a világ legnagyobb agyagvárosa). Itt találtam először vega almuerzo helyet, ahol a falon lévő képek szerint még Jézus is vega volt. <br>
+                Néhány napot ott töltöttem Huanchacoban, kis szörf falu, ahol nyilván szörföztem egy kicsit. Egyre jobban megy. 
+                </p>
+              <img src="/kepek/peru/trujillo (1).jpg">
+              <img src="/kepek/peru/trujillo (2).jpg">
+              <img src="/kepek/peru/trujillo (3).jpg">
+              <img src="/kepek/peru/trujillo (4).jpg">
+              <img src="/kepek/peru/trujillo (5).jpg">
+              <img src="/kepek/peru/trujillo (6).jpg">
+            </div>
+
+            <div id="dropdown23" class="dropdown-content">
+              <div class="dropdown-header">Rio Amazonas</div>
+              <p>Közel 30 óra alatt jutottam el ide, ahonnan egy 3 napos hajó útra indulok, az Amazonas szívébe. <br>
+                A trópusi fülledt levegő teljesen megrészegített. Első este kipróbáltam a cuy-t, tengerimalacot, egy falatot nem bírtam belőle enni, olyan undorító volt. Másnap nagy nehezen sikerült találnom egy hajót Iquitosba. Kissé drága árat kértek ahhoz képest, hogy csirkék közt utaztunk. Hatalmas élmény volt napokig hajózni az Amazonason, függőágyban aludni és matróz kosztot enni, ami meglepően jó volt. Jógázni a hajó tetején napfelkeltében (csirkeszarban…). Rajtam kívül még 4 másik gringo volt a hajón, mind németek, hármójukkal később együtt fedeztük fel a dzsunger fővárosát, Iquitost. 
+                </p>
+              <img src="/kepek/peru/amazon (1).jpg">
+              <img src="/kepek/peru/amazon (2).jpg">
+              <img src="/kepek/peru/amazon (3).jpg">
+              <img src="/kepek/peru/amazon (9).jpg">
+              <img src="/kepek/peru/amazon (8).jpg">
+              <img src="/kepek/peru/amazon (4).jpg">
+              <img src="/kepek/peru/amazon (5).jpg">
+              <img src="/kepek/peru/amazon (7).jpg">
+              <img src="/kepek/peru/amazon (6).jpg">
+            </div>
+
+            <div id="dropdown24" class="dropdown-content">
+              <div class="dropdown-header">Iquitos</div>
+              <p>Hatalmas város a dzsungel közepén, egyedül hajóval vagy repülővel lehet megközelíteni. Gyönyörű csempézett házak (mint Lisszabonban), még a kaucsuk korszakból. Itt található egy piac, ahol mindent is meglehet kapni: sárkányvértől (jó ez egy fa nedve) hallucinogénekig, krokodilhústól majomig (annak most épp nem volt szezonja) mindent. 
+              </p>
+              <img src="/kepek/peru/iquitos (1).jpg">
+              <img src="/kepek/peru/iquitos (2).jpg">
+              <img src="/kepek/peru/iquitos (3).jpg">
+              <img src="/kepek/peru/iquitos (4).jpg">
+              <img src="/kepek/peru/iquitos (5).jpg">
+              <img src="/kepek/peru/iquitos (6).jpg">
+              <img src="/kepek/peru/iquitos (7).jpg">
+            </div>
+
+            <div id="dropdown25" class="dropdown-content">
+              <div class="dropdown-header">Rio Napo</div>
+              <p>Egy hosszú és bonyodalmas utat választottam hogy eljussak Ecuadorba. <br>
+                Először egy kis csónakban kellett eljutnom Indianáig, ahonnan egy tuktukkal mentem át a másik oldalra a Napo folyóhoz. Innen Mazánból egy gyors hajóval utaztam két napig, egy éjszakát megszállva Santa Clotilde kis falujában. A hajón banánlevélbe csomagolt rizseshúst és nagyon gagyi üdítőt kaptunk. Minden felesleg, szemét, műanyag üveg repült ki az ablakon, bele a folyóba (az út végére egy útitársam is akadt, egy hatalmas teknős). Harmadik nap eljutottunk Cabo Pantoja-ba, a határfaluba. Itt fel kellett keresnem a Migrációs irodát, hogy kiléptessenek Peruból. Szerencsémre találkoztam egy európai, norvég lánnyal, aki kiderült, hogy ott él és ismer mindenkit, így sikerült szereznie nekem egy olcsó fuvart (még így is elég drága volt) át a határ túloldalára. Másnap korán hajnalban indultam egy kis családdal egy piciny csónakkal, útközben, a folyó közepén még rakományt cseréltünk és felvettünk embereket. Reggel 9-kor megebédeltünk, teknősbéka tojást ettünk. Egy rövid családlátogatás után megérkeztünk Nuevo Rocafuerte-be. Itt ismét be kellett jelentkeznem az országba, majd egy gyorshajóval eljutottam Cocába, ahonnan egy busszal másnap reggelre már Quitóban voltam. 
+                </p>
+              <img src="/kepek/peru/napo (1).jpg">
+              <img src="/kepek/peru/napo (2).jpg">
+              <img src="/kepek/peru/napo (3).jpg">
+              <img src="/kepek/peru/napo (4).jpg">
+              <img src="/kepek/peru/napo (5).jpg">
+              <img src="/kepek/peru/napo (6).jpg">
+              <img src="/kepek/peru/napo (7).jpg">
+              <img src="/kepek/peru/napo (8).jpg">
+            </div>
+
+            <div id="dropdown26" class="dropdown-content">
+              <div class="dropdown-header">Quito + Otavalo</div>
+              <p></p>
+              <img src="">
+              <p></p>
+            </div>
+
+            <div id="dropdown27" class="dropdown-content">
+              <div class="dropdown-header">Del-Ecuador</div>
+              <p></p>
+              <img src="">
+              <p></p>
+            </div>     
+        </div>
+          <script>
+
+    // Kiválasztjuk az összes területet és lenyíló tartalmat
+
+    const triggers = document.querySelectorAll('.dropdown-trigger');
+
+    const dropdowns = document.querySelectorAll('.dropdown-content');
+
+
+
+    // Lenyíló tartalom megjelenítése/kikapcsolása
+
+    triggers.forEach(trigger => {
+
+      trigger.addEventListener('click', function (e) {
+
+        e.preventDefault(); // Megakadályozza az alapértelmezett link működést
+
+
+
+        // Bezárja az összes lenyíló tartalmat
+
+        dropdowns.forEach(dropdown => {
+
+          dropdown.style.display = 'none';
+
+        });
+
+
+
+        // Megjeleníti a kattintott elemhez tartozó tartalmat
+
+        const targetId = this.dataset.target;
+
+        const targetDropdown = document.getElementById(targetId);
+
+
+
+        // A kattintási pozíció dinamikus meghatározása
+
+        const clickX = e.pageX;
+
+        const clickY = e.pageY;
+
+
+
+        // A dropdown pozíciójának beállítása
+
+        targetDropdown.style.left = `${clickX}px`;
+
+        targetDropdown.style.top = `${clickY}px`;
+
+        targetDropdown.style.display = 'block';
+
+      });
+
+    });
+
+
+
+    // Bezárja a lenyíló tartalmat, ha a felhasználó máshova kattint
+
+    document.addEventListener('click', function (e) {
+
+      if (!e.target.classList.contains('dropdown-trigger') &&
+
+          !e.target.closest('.dropdown-content')) {
+
+        dropdowns.forEach(dropdown => {
+
+          dropdown.style.display = 'none';
+
+        });
+
+      }
+
+    });
+
+  </script>
+    </body>
+</html>
